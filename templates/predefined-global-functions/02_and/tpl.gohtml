@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elden Ring bosses</title>
+</head>
+<body>
+    EXAMPLE #1
+    {{range .}}
+        {{.}}
+    {{end}}
+
+    EXAMPLE #2
+    {{if .}} /* If the boss is not null */
+        EXAMPLE #2 - {{.}}
+    {{end}}
+
+    EXAMPLE #3
+    {{range .}}
+        {{if .Name}} /* If the boss has a name */
+            EXAMPLE #3 - {{.Name}}
+        {{end}}
+    {{end}}
+
+    EXAMPLE #4
+    {{range .}}
+        {{if and .Name .Optional}} /* If the boss has a name and optional is true */
+            EXAMPLE #4 - Name: {{.Name}}
+            EXAMPLE #4 - Location: {{.Location}}
+            EXAMPLE #4 - Optional: {{.Optional}}
+        {{end}}
+    {{end}}
+</body>
+</html>
